@@ -13,7 +13,7 @@ let nodesGlobal
 
 sankeyfy({
   mode: 'xlsx',
-  xlsxURL: 'data/CBSEnergieBalans.xlsx',
+  xlsxURL: '/../data/CBSEnergieBalans.xlsx',
   // xlsxURL: '/assets_data/sankify_II3050.xlsx',
   targetDIV: 'mainContainer',
   margins: {vertical: 120,horizontal: 200}, // margins is not referenced in xlsx mode
