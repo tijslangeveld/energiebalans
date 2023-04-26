@@ -11,16 +11,18 @@ let autoPlayTimer
 let zoomHasInitialized = false
 let nodesGlobal
 
-sankeyfy({
-  mode: 'xlsx',
-  xlsxURL: 'data/CBSEnergieBalans.xlsx',
-  // xlsxURL: '/assets_data/sankify_II3050.xlsx',
-  targetDIV: 'mainContainer',
-  margins: {vertical: 120,horizontal: 200}, // margins is not referenced in xlsx mode
-  sankeyData: null, // not referenced in xlsx mode, format in accordance with sankey data object format
-  legend: null, //  not referenced in xlsx mode, format in accordance with legend format as implemented in xlsx example file
-  settings: null // not reference in xlsx mode. format in accordance with legend format as implementd thorugh xlsx route 
-})
+setTimeout(() => {
+  sankeyfy({
+    mode: 'xlsx',
+    xlsxURL: 'data/CBSEnergieBalans.xlsx',
+    // xlsxURL: '/assets_data/sankify_II3050.xlsx',
+    targetDIV: 'mainContainer',
+    margins: {vertical: 120,horizontal: 200}, // margins is not referenced in xlsx mode
+    sankeyData: null, // not referenced in xlsx mode, format in accordance with sankey data object format
+    legend: null, //  not referenced in xlsx mode, format in accordance with legend format as implemented in xlsx example file
+    settings: null // not reference in xlsx mode. format in accordance with legend format as implementd thorugh xlsx route 
+  })
+}, 1000)
 
 function sankeyfy (config) {
   switch (config.mode) {
